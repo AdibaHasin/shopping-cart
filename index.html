@@ -70,13 +70,6 @@
                         <h5> $<span id ="netTotal">1278</span></h5>
                      </div>
                   </div>
-                  <div class="alert alert-danger" role="alert" id ="showoff">
-                     The system is not updated yet.
-                   </div>
-
-                   <div class="alert alert-danger" role="alert" id="needCase">
-                     The system will be updated soon.
-                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
                   <button type="button" class="btn btn-success check-out">Check Out</button>
@@ -195,22 +188,42 @@
 
    //Remove
 
-      const removeOne = document.getElementById("removeOne");
-      removeOne.addEventListener("click", function(){
-      const removeCartOne = document.getElementById("needCase");
-      removeCartOne.style.display="block";
-      const removeCarTwo = document.getElementById("showoff");
-      removeCarTwo.style.display="none"; 
-   })
+   const removeOne = document.getElementById("removeOne");
+   removeOne.addEventListener("click", function(){
+
+      const pordOnePrice = document.getElementById("itemOneTotal").innerText;
+      const subTotal = document.getElementById("subTotal").innerText;
+      const totalOne = parseFloat(subTotal);
+      const valOne =  totalOne - pordOnePrice;
+
+      document.getElementById("subTotal").innerText = valOne;
+      document.getElementById("netTotal").innerText = valOne;
+
+      const removeCarTwo = document.getElementById("cart1");
+      removeCarTwo.style.display="none"
+      
 
 
-      const removeTwo= document.getElementById("removeTwo");
-      removeTwo.addEventListener("click", function(){
-      const removeCarTwo = document.getElementById("showoff");
-      removeCarTwo.style.display="block"; 
-      const removeCartOne = document.getElementById("needCase");
-      removeCartOne.style.display="none";
    })
+
+   const removeTwo= document.getElementById("removeTwo");
+   removeTwo.addEventListener("click", function(){
+
+      const pordTwoPrice = document.getElementById("itemTwoTotal").innerText;
+      const subTotal = document.getElementById("subTotal").innerText;
+      const totalTwo = parseFloat(subTotal);
+      const valTwo =  totalTwo - pordTwoPrice;
+
+      document.getElementById("subTotal").innerText = valTwo;
+      document.getElementById("netTotal").innerText = valTwo;
+
+      const removeCarTwo = document.getElementById("cart2");
+      removeCarTwo.style.display="none"
+      
+   })
+
+ 
+
 
     </script>
 
