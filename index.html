@@ -16,8 +16,8 @@
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item" >
-                  <div class="row" id="cart2" >
+               <div class="cart-item" id="cart2" >
+                  <div class="row" >
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
                         <h5>iPhone 11 128GB Black</h5>
@@ -52,6 +52,9 @@
                         <img src="images/remove.png" alt="" class="remove-item" id="removeOne">
                      </div>
                   </div>
+               </div>
+               <div class="cart-item text-center" id="cartEmpty">
+                  <h5>Your Cart is Empty</h5>
                </div>
 
                <div class="cart-item">
@@ -98,11 +101,6 @@
          document.getElementById("subTotal").innerText = totalValue;
          document.getElementById("netTotal").innerText = totalValue;
 
-         const removeCartOne = document.getElementById("needCase");
-         removeCartOne.style.display="none";
-         const removeCarTwo = document.getElementById("showoff");
-         removeCarTwo.style.display="none"; 
-
    })
 
    
@@ -129,12 +127,6 @@
 
             document.getElementById("subTotal").innerText = minusValue;
             document.getElementById("netTotal").innerText = minusValue;
-
-            const removeCartOne = document.getElementById("needCase");
-         removeCartOne.style.display="none";
-         const removeCarTwo = document.getElementById("showoff");
-         removeCarTwo.style.display="none"; 
-
       
 
          })
@@ -160,12 +152,6 @@
 
          document.getElementById("subTotal").innerText = totalValue2;
          document.getElementById("netTotal").innerText = totalValue2;
-
-         const removeCartOne = document.getElementById("needCase");
-         removeCartOne.style.display="none";
-         const removeCarTwo = document.getElementById("showoff");
-         removeCarTwo.style.display="none"; 
-
    })
 
       const btnMinus2 = document.getElementById("btnMinus2");
@@ -191,12 +177,6 @@
          document.getElementById("subTotal").innerText = minusValue2;
          document.getElementById("netTotal").innerText = minusValue2;
 
-         const removeCartOne = document.getElementById("needCase");
-         removeCartOne.style.display="none";
-         const removeCarTwo = document.getElementById("showoff");
-         removeCarTwo.style.display="none"; 
-
-        
    })
 
  
@@ -215,9 +195,7 @@
       document.getElementById("netTotal").innerText = valOne;
 
       const removeCarTwo = document.getElementById("cart1");
-      removeCarTwo.style.display="none"
-      
-
+      removeCarTwo.style.display="none";
 
    })
 
@@ -233,8 +211,7 @@
       document.getElementById("netTotal").innerText = valTwo;
 
       const removeCarTwo = document.getElementById("cart2");
-      removeCarTwo.style.display="none"
-      
+      removeCarTwo.style.display="none"  
    })
 
     </script>

@@ -54,4 +54,6 @@ body{
 	border: none;
 }
 
-
+#cartEmpty{
+	display: none;
+}
