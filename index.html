@@ -108,7 +108,14 @@
    
    const mninusItem = document.getElementById("btnMinus");
    mninusItem.addEventListener("click", function(){
-            const boxItem = document.getElementById("boxItem").value--;
+            const boxItem = document.getElementById("boxItem")
+            if(boxItem.value <=0 && minusValue <=0 ){
+            boxItem.value = 0;
+            minusValue = 0;
+         }
+         else{
+            boxItem.value--;
+         };
             const itemOneTotal = document.getElementById("itemOneTotal").innerText;
             const itemOne =  parseFloat(itemOneTotal);
             const minusItemOne = itemOneTotal - 59 ;
@@ -163,7 +170,14 @@
 
       const btnMinus2 = document.getElementById("btnMinus2");
       btnMinus2.addEventListener("click", function(){
-      const boxItem2 = document.getElementById("boxItem2").value--;
+      const boxItem2 = document.getElementById("boxItem2")
+      if(boxItem2.value <=0 && minusValue2 <=0 ){
+            boxItem2.value = 0;
+            minusValue2 = 0;
+         }
+         else{
+            boxItem2.value--;
+         };
       const itemTwoTotal = document.getElementById("itemTwoTotal").innerText;
       const itemTwo = parseFloat(itemTwoTotal);
       const minusItemTwo = itemTwo - 1219;
@@ -181,7 +195,8 @@
          removeCartOne.style.display="none";
          const removeCarTwo = document.getElementById("showoff");
          removeCarTwo.style.display="none"; 
-   
+
+        
    })
 
  
@@ -221,9 +236,6 @@
       removeCarTwo.style.display="none"
       
    })
-
- 
-
 
     </script>
 
